@@ -30,6 +30,8 @@ header {
 .contacts {
   display: flex;
   flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
   .contact {
     display: flex;
     align-items: center;
