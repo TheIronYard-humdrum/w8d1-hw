@@ -1,0 +1,99 @@
+@import 'bulma';
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.container {
+  margin: 30px auto;
+  width: 90%;
+}
+
+header {
+  display: flex;
+  border-bottom: solid black 1px;
+  justify-content: space-between;
+  align-items: baseline;
+  h2 {
+    font-size: 2em;
+  }
+  nav {
+    a {
+      margin: 10px;
+    }
+  }
+
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  .contact {
+    display: flex;
+    align-items: center;
+    border: solid black 1px;
+    padding: 5px;
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 30%;
+    }
+    p {
+      margin-left: 10px;
+    }
+  }
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 25px auto;
+  .detail-img-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7EC0EE;
+    position: relative;
+    .fa-arrow-left {
+      color: black;
+      font-size: 1.5em;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+    img {
+      border-radius: 50%;
+      padding: 20px;
+    }
+  }
+  .detail-contact-info {
+    display: flex;
+    flex-direction: column;
+    i {
+      display: flex;
+      align-items: center;
+      border-bottom: solid grey 2px;
+    }
+    .last {
+      border-bottom: none;
+    }
+    p {
+      padding: 10px 5px;
+      
+    }
+    
+  }
+}
+
+footer {
+  margin: 10px 0;
+}
+
+.wrapper {
+  margin: 10px 0;
+  width: 100%;
+}

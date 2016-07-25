@@ -1,0 +1,8 @@
+<ul class='contacts'>
+  <a href="/#/detail/{{ contact._id }}" ng-repeat="contact in vm.contacts">  
+    <li class="contact" >
+      <img ng-src="{{contact.img}}">
+      <p>{{contact.name}}</p>
+    </li>
+  </a>
+</ul>
