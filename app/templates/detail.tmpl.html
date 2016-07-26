@@ -1,20 +1,42 @@
 <div class='detail'>
   <div class='detail-img-box'>
   <a href="/#/home"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+  <i class="fa fa-trash" aria-hidden="true"></i>
+  <i ng-click="vm.editMode('true')" class="fa fa-pencil" aria-hidden="true"></i>
     <img ng-src="{{ vm.contact.img }}">
   </div>
-  <div class="detail-contact-info">
-  <i class="fa fa-user" aria-hidden="true">
-    <p class="name">{{vm.contact.name}}</p>
-  </i>
-  <i class="fa fa-envelope" aria-hidden="true">
-    <p class="email">{{vm.contact.email}}</p>
-  </i>
-  <i class="fa fa-mobile" aria-hidden="true">
-    <p class="phone">{{vm.contact.phone}}</p>
-  </i>
-  <i class="fa fa-globe last" aria-hidden="true">
-    <p class="address">{{vm.contact.address}}</p>
-  </i>
-  </div>
+
+  <ul class='contact-info'>
+    <li>
+      <div class="left">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <p ng-class="{hidden : !vm.isEditMode()}" class="name">{{vm.contact.name}}</p>
+        <input ng-class="{hidden : vm.isEditMode()}" type="text" placeholder="{{vm.contact.name}}" ng-model="new.newName">
+      </div>
+    </li>
+    <li>
+      <div class="left">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <p ng-class="{hidden : !vm.isEditMode()}" class="email">{{vm.contact.email}}</p>
+        <input ng-class="{hidden : vm.isEditMode()}" type="text" placeholder="{{vm.contact.email}}" ng-model="new.newEmail">
+      </div>
+    </li>
+    <li>
+      <div class="left">
+        <i class="fa fa-mobile" aria-hidden="true"></i>
+        <p ng-class="{hidden : !vm.isEditMode()}" class="phone">{{vm.contact.phone}}</p>
+        <input ng-class="{hidden : vm.isEditMode()}" type="text" placeholder="{{vm.contact.phone}}" ng-model="new.newPhone">
+      </div>
+    </li>
+    <li>
+      <div class="left">
+        <i class="fa fa-globe last" aria-hidden="true"></i>
+        <p ng-class="{hidden : !vm.isEditMode()}" class="address">{{vm.contact.address}}</p>
+        <input ng-class="{hidden : vm.isEditMode()}" type="text" placeholder="{{vm.contact.address}}" ng-model="new.newAddress">
+      </div>
+    </li>
+    <li>
+      <button ng-click="vm.submitEdit()" class="button" ng-class="{hidden : vm.isEditMode()}">Confirm Edit</button>
+    </li>
+  </ul>
 </div>
