@@ -5,12 +5,12 @@ function DetailController (ContactService, $stateParams, $state, $scope) {
   this.edit = false;
   vm.editMode = editMode;
   vm.isEditMode = isEditMode;
-  vm.deleteCon = deleteCon;
+  vm.deleteContact = deleteContact;
   vm.submitEdit = submitEdit;
 
   init();
 
-  function deleteCon (contact, $scope) {
+  function deleteContact (contact, $scope) {
     ContactService.deleteContact(contact).then( (res) => {
       $state.go('root.home')
     });
@@ -37,11 +37,9 @@ function DetailController (ContactService, $stateParams, $state, $scope) {
   }
 
   function init() {
-    console.log(vm.deleteCon)
     ContactService.getContact($stateParams.contact).then ( (res) => {
       vm.contact = res.data
     });
-    console.log(vm.contact)
   }
 
 }

@@ -6,6 +6,8 @@
   -webkit-box-sizing: border-box;
 }
 
+// Header for all States
+
 .container {
   margin: 30px auto;
   width: 90%;
@@ -70,6 +72,8 @@ header {
   }
 }
 
+// Detail & Edit Contact State
+
 .detail {
   display: flex;
   flex-direction: column;
@@ -89,6 +93,9 @@ header {
       position: absolute;
       left: 10px;
       top: 10px;
+      &:hover {
+        color: yellow;
+      }
     }
     .fa-trash {
       position: absolute;
@@ -97,6 +104,15 @@ header {
       font-size: 1.2em;
       &:hover {
         color: red;
+      }
+    }
+    .fa-pencil {
+      font-size: 1.2em;
+      position: absolute;
+      right: 30px;
+      bottom: 10px;
+      &:hover {
+        color: yellow;
       }
     }
     img {
@@ -127,13 +143,71 @@ header {
       .fa-mobile {
         font-size: 1.5em;
       }
+      .edit-name {
+        padding-left: 5px;
+      }
+
+      .edit-email {
+        padding-left: 5px;
+        width: 200px;
+      }
+
+      .edit-phone {
+        padding-left: 5px;
+        width: 120px;
+      }
+
+      .edit-address {
+        padding-left: 3px;
+        width: 300px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    }
+    .submit-edit {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
 
-.hidden {
-  display: none;
+// Add Contact State
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 50px auto;
+  input {
+    width: 100%;
+  }
+  .add-img {
+    display: flex;
+    justify-content: center;
+    img {
+      margin: 0 auto;
+    }
+  }
+  button {
+    width: 25%;
+    align-self: flex-end;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+// isnt there a selector like .edit-* that i can use to 
+// select anything that starts with edit-?
 
 footer {
   margin: 10px 0;
@@ -143,3 +217,10 @@ footer {
   margin: 10px 0;
   width: 100%;
 }
+
+
+
+
+
+
+

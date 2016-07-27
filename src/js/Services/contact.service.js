@@ -21,8 +21,8 @@ function ContactService ($http, SERVER) {
     return $http.put(SERVER.URL + contact._id, contact)
   }
 
-  function deleteContact(id) {
-    return $http.delete(SERVER.URL + id);
+  function deleteContact(contact) {
+    return $http.delete(SERVER.URL + contact._id);
   }
 
 }
