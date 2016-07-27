@@ -17,7 +17,7 @@ function ContactService ($http, SERVER) {
     return $http.get(SERVER.URL + id);
   }
 
-  function updateContact(id) {
+  function updateContact(contact) {
     return $http.put(SERVER.URL + contact._id, contact)
   }
 

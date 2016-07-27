@@ -11,32 +11,32 @@
       <div class="left">
         <i class="fa fa-user" aria-hidden="true"></i>
         <p ng-class="{hidden : !vm.isEditMode()}" class="name">{{vm.contact.name}}</p>
-        <input ng-class="{hidden : vm.isEditMode()}" type="text" placeholder="{{vm.contact.name}}" ng-model="new.newName">
+        <input ng-class="{hidden : vm.isEditMode()}" type="text" placeholder="{{vm.contact.name}}" ng-model="edit.name">
       </div>
     </li>
     <li>
       <div class="left">
         <i class="fa fa-envelope" aria-hidden="true"></i>
         <p ng-class="{hidden : !vm.isEditMode()}" class="email">{{vm.contact.email}}</p>
-        <input ng-class="{hidden : vm.isEditMode()}" type="text" placeholder="{{vm.contact.email}}" ng-model="new.newEmail">
+        <input ng-class="{hidden : vm.isEditMode()}" type="email" placeholder="{{vm.contact.email}}" ng-model="edit.email" >
       </div>
     </li>
     <li>
       <div class="left">
         <i class="fa fa-mobile" aria-hidden="true"></i>
         <p ng-class="{hidden : !vm.isEditMode()}" class="phone">{{vm.contact.phone}}</p>
-        <input ng-class="{hidden : vm.isEditMode()}" type="text" placeholder="{{vm.contact.phone}}" ng-model="new.newPhone">
+        <input ng-class="{hidden : vm.isEditMode()}" type="tel" placeholder="{{vm.contact.phone}}" ng-model="edit.phone">
       </div>
     </li>
     <li>
       <div class="left">
         <i class="fa fa-globe last" aria-hidden="true"></i>
         <p ng-class="{hidden : !vm.isEditMode()}" class="address">{{vm.contact.address}}</p>
-        <input ng-class="{hidden : vm.isEditMode()}" type="text" placeholder="{{vm.contact.address}}" ng-model="new.newAddress">
+        <input ng-class="{hidden : vm.isEditMode()}" type="text" placeholder="{{vm.contact.address}}" ng-model="edit.address">
       </div>
     </li>
     <li>
-      <button ng-click="vm.submitEdit()" class="button" ng-class="{hidden : vm.isEditMode()}">Confirm Edit</button>
+      <button ng-click="vm.submitEdit(edit)" class="button" ng-class="{hidden : vm.isEditMode()}">Confirm Edit</button>
     </li>
   </ul>
 </div>

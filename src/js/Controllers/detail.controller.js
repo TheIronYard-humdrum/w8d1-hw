@@ -16,9 +16,16 @@ function DetailController (ContactService, $stateParams, $state, $scope) {
     });
   }
 
-  function submitEdit() {
-    $scope.new.newName !== undefined ? vm.contact.name = $scope.new.newName : vm.contact.name = vm.contact.name;
-    console.log(vm.contact);
+  function submitEdit (edit) {
+    if ( edit !== undefined ) {
+      $scope.edit.name !== undefined ? vm.contact.name = $scope.edit.name : vm.contact.name = vm.contact.name;
+      $scope.edit.email !== undefined ? vm.contact.email = $scope.edit.email : vm.contact.email = vm.contact.email;
+      $scope.edit.phone !== undefined && Number($scope.edit.phone) ? vm.contact.phone = $scope.edit.phone : vm.contact.email = vm.contact.email;
+      $scope.edit.address !== undefined ? vm.contact.phone = $scope.edit.address : vm.contact.email = vm.contact.email;
+    }
+    ContactService.updateContact(vm.contact).then( (res) => {
+      $state.go('root.detail', {id: res.data._id}, {reload: true})
+    });
   }
 
   function editMode() {
